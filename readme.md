@@ -1,7 +1,6 @@
 # HiClock - A simple timepicker
 
-HiClock é um simples timepicker criado puramente com html, css e js.
-
+HiClock is a simple timepicker purely created with html, css and js.
 
   - VanillaJS
   - It's easy-to-use in your usual framework
