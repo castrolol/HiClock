@@ -1,0 +1,397 @@
+
+.hi-clock-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 99999;
+    display: none;  
+    pointer-events: auto;
+}
+
+
+.hi-clock-container h1 {
+  margin: 0;
+}
+
+.hi-clock {
+    position: fixed;
+    width: 260px;
+    height: 385px;
+    background: #eee;
+ 
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    margin-left: -130px;
+    margin-top: -192.5px;
+    z-index: 99999;
+}
+
+ 
+
+.hi-clock-container.show {
+  display: block;  
+}
+
+.hi-clock h1.h-title {
+    font-family: 'segoe UI', verdana;
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: center;
+    border-bottom: 1px solid #cfcfcf;
+    padding-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+ 
+}
+
+.hi-clock .h-clock-e {
+    background: #e9e9e9;
+    /*box-shadow: 0px 0px 15px 5px #aaa; s*/
+    height: 250px;
+    width: 250px;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+
+}
+
+
+.hi-clock h1.h-time {
+    font-family: 'segoe UI', verdana;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+    padding-top: 0px;
+    margin-right: 10px;
+    margin-left: 10px;
+    /* font-weight: bold; */
+    font-weight: lighter;
+}
+
+
+
+
+.hi-clock-container.hr .h-numbers.h-hour {
+    transform: scale3d(1, 1, 1);
+    pointer-events: auto;
+    opacity: 1;
+
+}
+
+.hi-clock-container.min .h-numbers.h-min {
+  transform: scale3d(1, 1, 1);  
+  pointer-events: auto;
+
+  opacity: 1; 
+}
+
+
+.hi-clock .h-numbers {
+    opacity: 0;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto !important;
+    text-align: center;   
+    pointer-events: none;
+    margin-left: -17px;
+    padding-top: 3px;    
+    transform: scale3d(1.2, 1.2, 1.2);
+    transition: all 0.3s ease-out;
+}
+
+
+.hi-clock .h-numbers.h-hour {
+    margin-left: -42px;
+    position: absolute;
+    top: 0px;
+}
+
+.hi-clock .h-numbers .h-2-dig{
+     padding-top: 7px;
+     padding-left: 0px;
+     padding-right: 2px;
+}
+
+.hi-clock .h-numbers .el {
+    box-sizing: border-box;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    min-width: 35px;
+    min-height: 35px;
+    border-radius: 100%;
+    padding-top: 7px;
+    margin-left: -17.5px;
+    font-family: 'Helvetica Neue', Roboto, sans-serif;
+}
+
+.hi-clock .i-0 {
+  
+}
+
+
+.hi-clock .i-1 {
+  transform: translate3d(52px, 13px, 0);
+}
+
+
+.hi-clock .i-2 {
+  transform: translate3d(86px, 55px, 0);
+}
+
+
+.hi-clock .i-3 {    
+    transform: translate3d(105px, 105px, 0);
+}
+
+.hi-clock .i-4 {
+  transform: translate3d(90px, 155px, 0);
+}
+
+.hi-clock .i-5 {
+  transform: translate3d(55px, 193px, 0);
+}
+
+.hi-clock .i-6 {    
+    transform: translate3d(0, 210px, 0);
+}
+
+.hi-clock .i-7 {
+  transform: translate3d(-93px, 158px, 0);
+}
+
+.hi-clock .i-8 {
+  transform: translate3d(-56px, 195px, 0);
+}
+
+.hi-clock .i-9 {    
+    transform: translate3d(-105px, 105px, 0);
+}
+
+.hi-clock .i-10 {
+   transform: translate3d(-86px, 55px, 0);
+}
+
+.hi-clock .i-11 {  
+   transform: translate3d(-52px, 13px, 0);
+}
+
+
+
+.hi-clock .i-center {    
+    transform: translate3d(-20px, 105px, 0);
+    
+}
+
+.hi-clock .h-inner-clock {
+  transform: scale3d(0.65,0.65,1) translate3d(2px,60px,0) rotateZ(0deg);
+  
+}
+
+
+.hi-clock .h-inner-clock .el {
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 27px;
+    padding-top: 14px;
+
+margin-left: -25px;
+  
+}
+
+
+.light .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.light .h-clock-e{
+  color: #fff;
+}
+
+.light .h-numbers .el{
+  background-color: #fff; }
+
+.light.hi-clock-container.hr .h-time .h-hour,
+.light.hi-clock-container.min .h-time .h-min {
+  color: #fff;
+}
+
+
+
+.light .h-numbers .el{
+  border-color: #ddd; 
+}
+
+.stable .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.stable .h-clock-e{
+  color: #f8f8f8;
+}
+
+.stable .h-numbers .el{
+  background-color: #f8f8f8; }
+
+.stable.hi-clock-container.hr .h-time .h-hour,
+.stable.hi-clock-container.min .h-time .h-min {
+  color: #f8f8f8;
+}
+
+
+
+.stable .h-numbers .el  {
+  border-color: #b2b2b2; }
+
+.positive .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.positive .h-clock-e{
+  color: #387ef5;
+}
+
+.positive .h-numbers .el.active{
+  background-color: #387ef5; }
+
+.positive.hi-clock-container.hr .h-time .h-hour,
+.positive.hi-clock-container.min .h-time .h-min {
+  color: #387ef5;
+}
+
+
+
+.positive .h-numbers .el  {
+  border-color: #0c63ee; }
+
+.calm .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.calm .h-clock-e{
+  color: #11c1f3;
+}
+
+.calm .h-numbers .el{
+  background-color: #11c1f3; }
+
+.calm.hi-clock-container.hr .h-time .h-hour,
+.calm.hi-clock-container.min .h-time .h-min {
+  color: #11c1f3;
+}
+
+
+
+.calm .h-numbers .el  {
+  border-color: #0a9ec7; }
+
+.assertive .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.assertive .h-clock-e{
+  color: #ef473a;
+}
+
+.assertive .h-numbers .el.active{
+  background-color: #ef473a; }
+
+.assertive.hi-clock-container.hr .h-time .h-hour,
+.assertive.hi-clock-container.min .h-time .h-min {
+  color: #ef473a;
+}
+
+
+
+.assertive .h-numbers .el.active  {
+  border-color: #e42012; }
+
+.balanced .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.balanced .h-clock-e{
+  color: #33cd5f;
+}
+
+.balanced .h-numbers .el.active{
+  background-color: #33cd5f; }
+
+.balanced.hi-clock-container.hr .h-time .h-hour,
+.balanced.hi-clock-container.min .h-time .h-min {
+  color: #33cd5f;
+}
+
+
+
+.balanced .h-numbers .el.active  {
+  border-color: #28a54c; }
+
+.energized .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.energized .h-clock-e{
+  color: #ffc900;
+}
+
+.energized .h-numbers .el.active{
+  background-color: #ffc900; }
+
+.energized.hi-clock-container.hr .h-time .h-hour,
+.energized.hi-clock-container.min .h-time .h-min {
+  color: #ffc900;
+}
+
+
+
+.energized .h-numbers .el.active  {
+  border-color: #e6b400; }
+
+.royal .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.royal .h-clock-e{
+  color: #886aea;
+}
+
+.royal .h-numbers .el.active{
+  background-color: #886aea; }
+
+.royal.hi-clock-container.hr .h-time .h-hour,
+.royal.hi-clock-container.min .h-time .h-min {
+  color: #886aea;
+}
+
+
+
+.royal .h-numbers .el.active  {
+  border-color: #6b46e5; }
+
+.dark .h-clock-e .el.active {
+  color: white !important;
+} 
+
+.dark .h-clock-e{
+  color: #444;
+}
+
+.dark .h-numbers .el.active{
+  background-color: #444; }
+
+.dark.hi-clock-container.hr .h-time .h-hour,
+.dark.hi-clock-container.min .h-time .h-min {
+  color: #444;
+}
+
+
+
+.dark .h-numbers .el.active  {
+  border-color: #111; }
