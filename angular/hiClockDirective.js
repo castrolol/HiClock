@@ -1,4 +1,4 @@
-function HiClockDirective($ionicPlatform){
+function HiClockDirective(){
    
   return {
     restrict: 'E',
