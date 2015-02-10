@@ -29,11 +29,11 @@
 
 			$(this).empty();
 			$(this).append(htmlTemplate);
-	 		debugger;
+	 		
 			clock = new HiClock(this);
-			clock.on("change", emit(this, "change", [this]));
-			clock.on("show", emit(this, "show", [this]));
-			clock.on("hide", emit(this, "hide", [this]));
+			clock.on("change", emit(this, "change", [clock]));
+			clock.on("show", emit(this, "show", [clock]));
+			clock.on("hide", emit(this, "hide", [clock]));
 			$(this).data("clock", clock);
 
 		});
