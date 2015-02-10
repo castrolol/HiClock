@@ -38,9 +38,7 @@
       this.clockElement = hiClockElement.querySelector(".hi-clock-container");
 
 
-      [].forEach.call(hiClockElement.classList, (function(c) {
-        this.clockElement.classList.add(c);
-      }).bind(this));
+    
 
       this.init();
 

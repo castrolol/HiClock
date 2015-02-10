@@ -29,7 +29,7 @@
 
 			$(this).empty();
 			$(this).append(htmlTemplate);
-	 
+	 		debugger;
 			clock = new HiClock(this);
 			clock.on("change", emit(this, "change", [this]));
 			clock.on("show", emit(this, "show", [this]));
