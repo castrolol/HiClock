@@ -29,27 +29,33 @@ function HiClockDirective($ionicPlatform) {
 
         var clock = new HiClock(el);
         clock.on("show", RegisterBackButton.bind(null, clock));
-        var hasApplying = false;
+        var itsApplying = false;
         scope.$watch("ngTime", function( newValue, oldValue){
-          if(hasApplying) return;
+          if(itsApplying) return;
           clock.inputElement.value = newValue || "";  
         });
-
+        
         scope.$watch("ngDate", function(newValue, oldValue){
-          if(hasApplying) return;
+          if(itsApplying) return;
           var date = newValue;
-          clock
-            .setHour(date.getHours(), true)
-            .setMin(date.getMinutes(), true);  
+          if( date && date instanceof Date ){
+             clock
+               .setHour(date.getHours(), true)
+               .setMin(date.getMinutes(), true);  
+          }else{
+              clock.inputElement.value = "";
+          }
         });
- 
-        clock.on("change" , function(){
-          hasApplying = true;
-          scope.ngTime = clock.getTime();
-          scope.ngDate = clock.getDate();
-          scope.$apply();
-          hasApplying = false;
-        });
+        
+        setTimeout(function(){
+          clock.on("change" , function(){
+             scope.ngTime = clock.getTime();
+             scope.ngDate = clock.getDate();
+             itsApplying = true;
+             scope.$apply();
+             itsApplying = false;
+          });
+        },100);
         
 
       });
