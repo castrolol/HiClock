@@ -5,7 +5,7 @@
                    <span class="el i-8 h-2-dig">20</span>           <span class="el i-9 h-2-dig">21</span>          <span class="el i-10 h-2-dig">22</span>             <span class="el i-11 h-2-dig">23</span>        </div>          </div>    </div>     </div></div>';
 
 	jQuery.fn.hiClock = function(value){
-
+		var options = $.extend(jQuery.fn.hiClock.defaults, value || {});
 		function emit(el, event, params){
 			return function(){ $(el).trigger(event, params); };
 		}
@@ -31,6 +31,7 @@
 			$(this).append(htmlTemplate);
 	 		
 			clock = new HiClock(this);
+			clock.clockElement.classList.add(options.theme);
 			clock.on("change", emit(this, "change", [clock]));
 			clock.on("show", emit(this, "show", [clock]));
 			clock.on("hide", emit(this, "hide", [clock]));
@@ -39,6 +40,10 @@
 		});
 
 		return this;
+	};
+
+	jQuery.fn.hiClock.defaults = {
+		theme: "calm"
 	};
 
 }($));
