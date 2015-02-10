@@ -16,7 +16,7 @@
 		});
 
 		this.each(function(){
-			var clock = new Clock(this);
+			var clock = new HiClock(this);
 			clock.on("change", emit(this, "change", [this]));
 			clock.on("show", emit(this, "show", [this]));
 			clock.on("hide", emit(this, "hide", [this]));
