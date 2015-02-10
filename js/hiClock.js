@@ -115,8 +115,8 @@
       timeElement
         .querySelector(".h-hour")
         .addEventListener("click", (function() {
-          self.clockElement.classList.remove("min");
-          self.clockElement.classList.add("hr");
+          this.clockElement.classList.remove("min");
+          this.clockElement.classList.add("hr");
         }).bind(this));
 
       this.clockElement.addEventListener("click", (function(e) {
@@ -127,7 +127,7 @@
             value: +(e.target.textContent)
           };
           this.handleAction(ctx);
-        } else if (e.target == self.clockElement) {
+        } else if (e.target == this.clockElement) {
           this.hide();
         }
       }).bind(this));
