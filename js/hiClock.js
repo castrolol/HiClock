@@ -140,7 +140,7 @@
       this.setPart({
         type: "hour",
         value: v,
-        silent: !cancelPropagation
+        silent: cancelPropagation
       });
       return this;
     };
@@ -150,7 +150,7 @@
       this.setPart({
         type: "min",
         value: v,
-        silent: !cancelPropagation
+        silent: cancelPropagation
       });
       return this;
     };
