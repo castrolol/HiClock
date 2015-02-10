@@ -51,6 +51,11 @@ and will use
     <hi-clock></hi-clock>
 ```
 
+```html
+    <hi-clock ng-time="timeText"></hi-clock>
+    <hi-clock ng-date="dateElement"></hi-clock>
+```
+
 can be used in Ionic (with backbutton helper)
 use the [hiClockDirective.ionic.js] instead of [hiClockDirective.js]
 
