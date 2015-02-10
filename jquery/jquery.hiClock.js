@@ -14,6 +14,7 @@
 
 			var clock = null;
 			if(clock = $(this).data("clock")){
+
 				if(value instanceof Date){
 
 					clock
@@ -27,7 +28,7 @@
 			}
 
 			$(this).empty();
-			$(this).append($(htmlTemplate));
+			$(this).append(htmlTemplate);
 	 
 			clock = new HiClock(this);
 			clock.on("change", emit(this, "change", [this]));
