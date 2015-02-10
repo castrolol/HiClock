@@ -27,13 +27,26 @@ or if you use in multiples places of your html
 ```
 #JQuery
 
-if you use JQuery
+you can use the JQuery plugin
+
+```js
+    $(".hi-clock-container").hiClock();
+    $(".hi-clock-container").on("change", function(ev, clock){
+      var time = clock.getTime();
+      var date = clock.getDate();
+    });
+
+```
+
+if you use JQuery pure (without plugin)
 ```js
 
     $(".hi-clock-container").each(function(){
         new HiClock(this);
     });
 ```
+
+
 
 #Angular Directive
 
