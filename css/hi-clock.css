@@ -207,6 +207,28 @@ margin-left: -25px;
 }
 
 
+.h-clock-e .el.active {
+  color: #333 !important;
+} 
+
+ .h-clock-e{
+  color: #a8a8a8;
+}
+
+ .h-numbers .el.active{
+  background-color: #f8f8f8; }
+
+.hi-clock-container.hr .h-time .h-hour,
+.hi-clock-container.min .h-time .h-min {
+  color: #a8a8a8;
+}
+
+
+
+ .h-numbers .el  {
+  border-color: #b2b2b2; }
+
+
 .light .h-clock-e .el.active {
   color: white !important;
 } 
@@ -215,7 +237,7 @@ margin-left: -25px;
   color: #fff;
 }
 
-.light .h-numbers .el{
+.light .h-numbers .el.active{
   background-color: #fff; }
 
 .light.hi-clock-container.hr .h-time .h-hour,
@@ -228,27 +250,6 @@ margin-left: -25px;
 .light .h-numbers .el{
   border-color: #ddd; 
 }
-
-.stable .h-clock-e .el.active {
-  color: white !important;
-} 
-
-.stable .h-clock-e{
-  color: #f8f8f8;
-}
-
-.stable .h-numbers .el{
-  background-color: #f8f8f8; }
-
-.stable.hi-clock-container.hr .h-time .h-hour,
-.stable.hi-clock-container.min .h-time .h-min {
-  color: #f8f8f8;
-}
-
-
-
-.stable .h-numbers .el  {
-  border-color: #b2b2b2; }
 
 .positive .h-clock-e .el.active {
   color: white !important;
@@ -279,7 +280,7 @@ margin-left: -25px;
   color: #11c1f3;
 }
 
-.calm .h-numbers .el{
+.calm .h-numbers .el.active{
   background-color: #11c1f3; }
 
 .calm.hi-clock-container.hr .h-time .h-hour,
@@ -322,7 +323,9 @@ margin-left: -25px;
 }
 
 .balanced .h-numbers .el.active{
-  background-color: #33cd5f; }
+  background-color: #33cd5f; 
+    
+}
 
 .balanced.hi-clock-container.hr .h-time .h-hour,
 .balanced.hi-clock-container.min .h-time .h-min {
@@ -385,7 +388,9 @@ margin-left: -25px;
 }
 
 .dark .h-numbers .el.active{
-  background-color: #444; }
+  background-color: #444; 
+  
+}
 
 .dark.hi-clock-container.hr .h-time .h-hour,
 .dark.hi-clock-container.min .h-time .h-min {
