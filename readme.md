@@ -37,7 +37,8 @@ if you use JQuery
 
 #Angular Directive
 
-a [quick'n dirty JSFiddle] (use the HiClockDirective.js content)
+a [quick'n dirty JSFiddle], this example use the HiClockDirective.js content
+
 
 if you use Angular, can download the hi-clock directive  ([hiClockDirective.js])
 
