@@ -37,6 +37,8 @@ if you use JQuery
 
 #Angular Directive
 
+a [quick'n dirty JSFiddle]
+
 if you use Angular, can download the hi-clock directive  ([hiClockDirective.js])
 
 (it is necessary to put the html file in the templates folder)
@@ -65,3 +67,4 @@ use the [hiClockDirective.ionic.js] instead of [hiClockDirective.js]
 
 [hiClockDirective.ionic.js]:https://github.com/castrolol/HiClock/blob/master/angular/hiClockDirective.ionic.js
 [hiClockDirective.js]:https://github.com/castrolol/HiClock/blob/master/angular/hiClockDirective.js
+[quick'n dirty JSFiddle]:http://jsfiddle.net/Castrolol/j2ekmhsr/
