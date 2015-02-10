@@ -27,6 +27,9 @@ or if you use in multiples places of your html
 ```
 #JQuery
 
+
+a [JQuery with JSFiddle]
+
 you can use the JQuery plugin
 
 ```js
@@ -78,7 +81,7 @@ use the [hiClockDirective.ionic.js] instead of [hiClockDirective.js]
 
 
 
-
+[JQuery with JSFiddle]:http://jsfiddle.net/Castrolol/47skgrbk
 [hiClockDirective.ionic.js]:https://github.com/castrolol/HiClock/blob/master/angular/hiClockDirective.ionic.js
 [hiClockDirective.js]:https://github.com/castrolol/HiClock/blob/master/angular/hiClockDirective.js
 [quick'n dirty JSFiddle]:http://jsfiddle.net/Castrolol/j2ekmhsr/
