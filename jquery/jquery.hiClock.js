@@ -15,10 +15,14 @@
 			var clock = null;
 			if(clock = $(this).data("clock")){
 				if(value instanceof Date){
-					clock.setDate(value);
+
+					clock
+						.setHour(value.getHours(), true)
+						.setMin(value.getMinutes(), true);  
 				}else{
-					clock.setTime(value);
+					clock.inputElement.value = value;
 				}
+
 				return;
 			}
 
