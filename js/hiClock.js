@@ -46,9 +46,10 @@
 
     };
 
-    HiClock.prototype.setInputValue = function(val) {
+    HiClock.prototype.setInputValue = function(val, silent) {
       this.inputElement.value = val;
-      this.emit("change", value);
+      if(silent) return;
+      this.emit("change", val);
     }
 
     HiClock.prototype.setActive = function(ctx){
@@ -75,7 +76,7 @@
 
       timeElement.querySelector(".h-" + ctx.type).textContent = text;
 
-      this.setInputValue(timeElement.textContent.trim());
+      this.setInputValue(timeElement.textContent.trim(), ctx.silent);
 
       this.setActive(ctx);
 
@@ -135,22 +136,42 @@
     };
 
 
-    HiClock.prototype.setHour = function(v) {
+    HiClock.prototype.setHour = function(v, cancelPropagation) {
       this.setPart({
         type: "hour",
-        value: v
+        value: v,
+        silent: !cancelPropagation
       });
       return this;
     };
 
 
-    HiClock.prototype.setMin = function(v) {
+    HiClock.prototype.setMin = function(v, cancelPropagation) {
       this.setPart({
         type: "min",
-        value: v
+        value: v,
+        silent: !cancelPropagation
       });
       return this;
     };
+
+    HiClock.prototype.getTime = function(){
+      var value = this.inputElement.value;
+      var parts = null;
+      if( parts = value.match(/(2[0-3]|[01][0-9]):([0-5][0-9])/) ){
+        return parts[1] + ":" + parts[2];
+      }
+      return "00:00";
+    }
+
+    HiClock.prototype.getDate = function(){
+      var date = new Date();
+      var parts = this.getTime().split(":");
+      date.setHours(+parts[0]);
+      date.setMinutes(+parts[1]);
+      date.setSeconds(0);
+      return date;
+    }
 
     HiClock.prototype.show = function() {
 
