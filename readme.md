@@ -12,7 +12,7 @@ and call the following code.
 
 ```js
    var containerClass = ".hi-clock-container"
-   var hiClockList = document.querySelecto(containerClass);
+   var hiClockList = document.querySelector(containerClass);
    new HiClock(hiClockList[i]);
 
 ```
