@@ -130,6 +130,12 @@
     margin-left: -17.5px;
     font-family: 'Helvetica Neue', Roboto, sans-serif;
     left: 50%;
+    cursor: pointer;
+    transition: background 0.5s ease;
+}
+
+.hi-clock .h-numbers .el:hover {
+    background: #ccc;
 }
 
 .hi-clock .i-0 {
